@@ -1,0 +1,64 @@
+<html>
+	<head>
+        <title>Softys AWS Page</title>
+        <link id="favicon" rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    </head>
+    <body>
+
+<script src="ruffle/ruffle.js"></script>
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("load", (event) => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.getElementById("container"); 
+            container.appendChild(player);
+            player.load({
+                url: "game.swf", 
+                backgroundColor: "#000", 
+             });
+
+        });
+    </script>
+
+		<center><h1>Welcome To Softys AWS Page</h1></center>
+        <h2>This page is currently blank just because im still testing this!</h2>
+
+		<div id="GETS">
+            <h3 id="GETURL"></h3>
+
+            <h3 id="GETFAVICON"></h3>
+            <!-- <img id="FAVICONIMG" src=""> -->
+
+            <h3 id="GETTITLE"></h3>
+
+            <h3 id="GETACTIVEELEMENT"></h3>
+        </div>
+
+        <div>
+            <button onclick="GETS()">Click Me!</button>
+        </div>
+
+		<script>
+			document.getElementById("GETURL").innerHTML = 
+			"Current URL : <br> " + document.URL;
+
+            document.getElementById("GETFAVICON").innerHTML = 
+			"Current Favicon URL : <br> " + document.getElementById("favicon").href;
+
+            /* document.getElementById("FAVICONIMG").src=
+            "images/favicon.png"; */
+
+            document.getElementById("GETTITLE").innerHTML = 
+			"Current Favicon URL : <br> " + document.title;
+            
+            function GETS (){
+                document.getElementById("GETACTIVEELEMENT").innerHTML = 
+			"Current Active Element : <br> " + document.activeElement;
+            }
+
+		</script>
+        <br>
+        <div id="container"> </div>
+	</body>
+</html>
